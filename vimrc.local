@@ -1,13 +1,82 @@
 " ack as grep replacement
 set grepprg=ack
 
-" Replicate textmate CMD-[ and CMD-] for indentation
-nmap <D-[> <<
-nmap <D-]> >>
-vmap <D-[> <gv
-vmap <D-]> >gv
+" cursor look and feel
+set guicursor=n-v-c:block-Cursor-blinkon0
+set guicursor+=ve:ver35-Cursor
+set guicursor+=o:hor50-Cursor
+set guicursor+=i-ci:ver25-Cursor
+set guicursor+=r-cr:hor20-Cursor
+set guicursor+=sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
 
-" NERD Commenter Sucks balls. Use tComment instead!
-nmap <D-/> gc
-vmap <D-/> gcgv
+" default color scheme
+color ir_black
+
+" hide toolbar
+set guioptions-=T
+
+" hide menu
+set guioptions-=m
+
+" hide right scrollbar
+set guioptions-=r
+
+" hide left scrollbar
+set guioptions-=l
+
+" hide left scrollbar when using multiple buffers
+set guioptions-=L
+
+" color scheme changer
+nmap <silent> <Leader>1 :colorscheme desert<CR>
+nmap <silent> <Leader>2 :colorscheme twilight<CR>
+nmap <silent> <Leader>3 :colorscheme xoria256<CR>
+nmap <silent> <Leader>4 :colorscheme ir_black<CR>
+nmap <silent> <Leader>5 :colorscheme mustang<CR>
+
+" open current file with Firefox, Google Chrome, Safari
+map <silent> <Leader>firefox :! open -a firefox.app %:p<CR>
+map <silent> <Leader>chrome :! open -a google\ chrome.app %:p<CR>
+
+" quickly switch buffers
+map <Leader>j :b#<CR>
+
+" change to ~/Desktop directory
+nmap <Leader>d :cd ~/Desktop<CR>:e.<CR>
+
+" space instead of esc to enter command line
+nmap <space> :
+
+" get out of INSERT mode with jj
+inoremap jj <ESC>
+cnoremap jj <ESC>
+
+" indent in visual and insert mode
+vmap > >gv
+vmap < <gv
+
+" indent with tab and shift-tag in visual mode
+vmap <Tab> >gv
+vmap <S-Tab> <gv
+
+" map control left and control right to swap the buffer
+"map <C-A-right> <ESC>:bn<CR>
+"map <C-A-left> <ESC>:bp<CR>
+
+" ctags.vim
+let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
+
+" map <D-d> :execute 'NERDTreeToggle ' . getcwd()<CR>
+" navigates nerdtree to the current file
+" map <leader><S-d> :NERDTree %:p:h<CR> 
+
+" ,w will easily switch window focus
+map <leader>w <C-w>w
+
+" Clean up the trailing spaces
+nmap <leader><S-s> :call Preserve("%s/\\s\\+$//e")<CR>
+
+" <Leader> timeout 
+set timeoutlen=500
+
 

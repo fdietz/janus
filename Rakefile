@@ -230,9 +230,9 @@ task :link_vimrc do
   end
 end
 
-desc "link vimrc.local to ~/.vimrc.local"
-task :link_vimrc_local do
-  %w[ vimrc.local gvimrc.local ].each do |file|
+desc "link vimrc.local, gvimrc.local and ackrc to ~/.vimrc.local etc."
+task :link_rc_local do
+  %w[ vimrc.local gvimrc.local ackrc].each do |file|
     dest = File.expand_path("~/.#{file}")
     unless File.exist?(dest)
       ln_s(File.expand_path("../#{file}", __FILE__), dest)
