@@ -1,0 +1,16 @@
+" set leader
+let mapleader = ","
+
+" ack as grep replacement
+set grepprg=ack
+
+" Replicate textmate CMD-[ and CMD-] for indentation
+nmap <D-[> <<
+nmap <D-]> >>
+vmap <D-[> <gv
+vmap <D-]> >gv
+
+" NERD Commenter Sucks balls. Use tComment instead!
+nmap <D-/> gc
+vmap <D-/> gcgv
+

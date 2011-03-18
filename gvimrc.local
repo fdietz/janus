@@ -1,0 +1,5 @@
+" hide scrollbar, hide toolbar
+set guioptions=aAce
+
+" font
+set gfn=Monaco:h13
