@@ -25,6 +25,9 @@ set smartcase
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,test/fixtures/*,vendor/gems/*
 
+" set leader
+let mapleader = ","
+
 " Status bar
 set laststatus=2
 

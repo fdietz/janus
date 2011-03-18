@@ -1,6 +1,3 @@
-" set leader
-let mapleader = ","
-
 " ack as grep replacement
 set grepprg=ack
 
