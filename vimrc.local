@@ -79,4 +79,6 @@ nmap <leader><S-s> :call Preserve("%s/\\s\\+$//e")<CR>
 " <Leader> timeout 
 set timeoutlen=500
 
+map <D-r>:Rake<CR>
+map <D-R>:.Rake<CR>
 
