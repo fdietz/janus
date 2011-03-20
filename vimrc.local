@@ -79,6 +79,15 @@ nmap <leader><S-s> :call Preserve("%s/\\s\\+$//e")<CR>
 " <Leader> timeout 
 set timeoutlen=500
 
+" run test with Cmd-r and Cmd-R (depends on rails.vim)
 map <D-r>:Rake<CR>
 map <D-R>:.Rake<CR>
+
+" settings for VimClojure
+let g:vimclojure#HighlightBuiltins=1   " Highlight Clojure's builtins
+let g:vimclojure#ParenRainbow=1        " Rainbow parentheses'!
+let g:vimclojure#DynamicHighlighting=1 " Dynamically highlight functions
+"let vimclojure#NailgunClient="/Users/hinmanm/bin/ng" " Nailgun location
+"let vimclojure#WantNailgun=1
+"let vimclojure#SplitPos = "right"
 
