@@ -60,8 +60,8 @@ vmap <Tab> >gv
 vmap <S-Tab> <gv
 
 " map control left and control right to swap the buffer
-"map <C-A-right> <ESC>:bn<CR>
-"map <C-A-left> <ESC>:bp<CR>
+map <C-A-right> <ESC>:bn<CR>
+map <C-A-left> <ESC>:bp<CR>
 
 " ctags.vim
 let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
@@ -80,8 +80,8 @@ nmap <leader><S-s> :call Preserve("%s/\\s\\+$//e")<CR>
 set timeoutlen=500
 
 " run test with Cmd-r and Cmd-R (depends on rails.vim)
-map <D-r>:Rake<CR>
-map <D-R>:.Rake<CR>
+" map <D-r>:Rake<CR>
+" map <D-R>:.Rake<CR>
 
 " settings for VimClojure
 let g:vimclojure#HighlightBuiltins=1   " Highlight Clojure's builtins
@@ -90,4 +90,15 @@ let g:vimclojure#DynamicHighlighting=1 " Dynamically highlight functions
 "let vimclojure#NailgunClient="/Users/hinmanm/bin/ng" " Nailgun location
 "let vimclojure#WantNailgun=1
 "let vimclojure#SplitPos = "right"
+
+" Leader shortcuts for Rails commands
+map <Leader>m :Rmodel
+map <Leader>c :Rcontroller
+map <Leader>v :Rview
+map <Leader>u :Runittest
+map <Leader>f :Rfunctionaltest
+
+map <Leader>r :Rake<CR>
+map <Leader>R :.Rake<CR>
+
 
